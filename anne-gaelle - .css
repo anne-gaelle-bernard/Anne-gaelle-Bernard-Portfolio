@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 30px;
+    gap: 100px;
 }
 
 .navbar-nav a {
