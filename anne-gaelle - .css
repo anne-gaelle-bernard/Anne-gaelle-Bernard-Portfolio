@@ -277,7 +277,7 @@ body {
     right: 0;
     top: 0;
     width: 100%; 
-    display: flex; 
+    display: block; 
     flex-direction: column; 
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
