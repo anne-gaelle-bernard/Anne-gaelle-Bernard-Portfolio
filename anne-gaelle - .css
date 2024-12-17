@@ -273,7 +273,9 @@ body {
     @media screen and (min-width: 320px) and (max-width: 768px) {
         
   .navbar {
-    justify-content: flex;
+    flex-direction: column;
+    flex: none;
+    padding: 10px;
   }
 
 
