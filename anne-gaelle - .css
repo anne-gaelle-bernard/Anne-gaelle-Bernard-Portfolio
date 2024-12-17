@@ -90,6 +90,72 @@ body {
     justify-content: center;
     text-align: center;
 }
+.navbar {
+        display: flex;
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
+        padding: 10px; /* Add padding for spacing */
+        background-color: #fff; /* Ensure clear visibility */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+        gap: 15px; /* Add spacing between nav items */
+        width: 100%; /* Ensure nav spans full width */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Remove bullets */
+    }
+
+    .navbar-nav li {
+        width: 100%; /* Full-width items */
+        text-align: center; /* Center text for nav items */
+    }
+
+    .navbar-nav a {
+        text-decoration: none;
+        font-size: 1rem; /* Adjust for readability */
+        color: #333; /* Ensure text is visible */
+        padding: 10px 20px; /* Add padding for touch targets */
+        display: block; /* Make links span the full width */
+        border-radius: 5px; /* Optional: Rounded edges */
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar-nav a:hover {
+        background-color: #f0f0f0; /* Highlight on hover */
+        color: #000; /* Optional: Darker text on hover */
+    }
+
+    /* Optional: Add a toggle button for collapsing */
+    .navbar-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333; /* Button background */
+        color: #fff; /* Button text color */
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .navbar-collapse {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        width: 100%; /* Full width on small screens */
+    }
+
+    .navbar-collapse.active {
+        display: flex; /* Show when active */
+    }
+}
 
 .header-content {
     max-width: 800px;
