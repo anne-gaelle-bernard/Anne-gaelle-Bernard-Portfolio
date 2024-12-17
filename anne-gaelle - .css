@@ -6,7 +6,6 @@
     --background-color: #121212;
     --card-background: rgba(255, 255, 255, 0.1);
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -93,7 +92,7 @@ body {
     text-align: center;
 }
 
-}
+
 
 .header-content {
     max-width: 800px;
