@@ -274,52 +274,52 @@ body {
 
     @media screen and (max-width: 768px) {
   .navbar {
-    position: fixed; /* Fixes the navbar to the top for easy access */
+    position: fixed; 
     right: 0;
     top: 0;
-    width: 100%; /* Ensures full-width on smaller screens */
-    display: flex; /* Enables flexbox layout for content alignment */
-    flex-direction: column; /* Stack items vertically */
-    background-color: #fff; /* Set a solid background for visibility */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    z-index: 1000; /* Ensures navbar is above other elements */
+    width: 100px; 
+    display: flex; 
+    flex-direction: column; 
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
   }
 
   .navbar-nav {
     display: flex;
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: flex-start; /* Align items to the left for text alignment */
-    padding: 10px 20px; /* Add padding for better spacing */
-    gap: 10px; /* Add space between nav items */
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 10px 20px; 
+    gap: 10px;
   }
 
   .navbar-nav li {
-    list-style: none; /* Remove bullets for a clean look */
-    width: 100%; /* Full-width items */
+    list-style: none; 
+    width: 100%; 
   }
 
   .navbar-nav a {
-    text-decoration: none; /* Remove underline */
-    font-size: 1rem; /* Adjust for readability */
-    color: #333; /* Neutral color for text */
-    padding: 10px; /* Add touch-friendly spacing */
-    display: block; /* Ensure links span full width */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
+    font-size: 1rem; 
+    color: #333;
+    padding: 10px; 
+    display: block; 
+    transition: background-color 0.3s ease; 
   }
 
   .navbar-nav a:hover {
-    background-color: #f4f4f4; /* Light gray background on hover */
-    color: #000; /* Darker text color for contrast */
+    background-color: #f4f4f4; 
+    color: #000; 
   }
 
   .navbar-toggle {
-    position: absolute; /* Position toggle for easy access */
+    position: absolute; 
     top: 10px;
     right: 15px;
-    background-color: #333; /* Dark background for toggle button */
-    color: #fff; /* White color for icon/text */
+    background-color: #333; 
+    color: #fff;
     border: none;
-    font-size: 1.5rem; /* Make it large for visibility */
+    font-size: 1.5rem; 
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -327,17 +327,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1001; /* Ensure it stays above other elements */
+    z-index: 1001; 
   }
 
   .navbar-collapse {
-    display: none; /* Initially hide the navbar menu */
+    display: none; 
     flex-direction: column;
-    width: 100%; /* Full width */
+    width: 100%; 
   }
 
   .navbar-collapse.active {
-    display: flex; /* Show navbar menu when active */
+    display: flex; 
   }
 }
 
