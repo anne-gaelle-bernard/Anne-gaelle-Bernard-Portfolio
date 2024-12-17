@@ -253,15 +253,12 @@ body {
     .navbar {
         flex-direction: column;
         padding: 10px;
-        background-color: black;
     }
 
-    .navbar-nav {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+    .navbar a {
+        margin: 5px 0;
     }
-
+}
     .header-content h1 {
         font-size: 1.8rem; 
         text-align: center; 
