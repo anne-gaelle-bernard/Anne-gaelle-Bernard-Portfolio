@@ -228,39 +228,107 @@ body {
 }
 
 /* Media Query for Screens Smaller than 768px */
-@media screen and (max-width: 768px) {
+/* General Styles - For larger screens (tablet, desktop, etc.) */
+@media screen and (min-width: 769px) {
 
     .header-content h1 {
-        font-size: 1.8rem; 
-        text-align: center; 
-        margin-bottom: 15px; 
-        padding: 0 10px;
+        font-size: 4rem; /* Larger font for larger screens */
+        text-align: center;
     }
 
     .header-content p {
-        font-size: 1rem; 
-        text-align: center; 
-        line-height: 1.5; 
-        margin: 0 15px; 
+        font-size: 1.5rem; /* Larger paragraph font */
+        text-align: center;
     }
 
     .skills-grid, 
     .projects-grid {
-        flex-direction: column; 
-        align-items: center; 
-        gap: 20px; 
-        padding: 10px 15px; 
+        flex-direction: row; /* Grid items side by side for larger screens */
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .skill-card, 
     .project-card {
-        width: 90%; 
-        max-width: 350px;
-        margin-bottom: 20px; 
+        width: 250px; /* Standard width for cards */
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
     .container {
-        padding: 10px 15px; 
+        padding: 20px 30px; /* Padding for larger screens */
     }
 }
 
+/* Media Query for Screens Smaller than 768px (Phones, small tablets) */
+@media screen and (max-width: 768px) {
+
+    .header-content h1 {
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
+        text-align: center;
+        margin-bottom: 15px;
+        padding: 0 10px; /* Padding adjustment for mobile */
+    }
+
+    .header-content p {
+        font-size: 1rem; /* Smaller font size for better readability */
+        text-align: center;
+        line-height: 1.5;
+        margin: 0 15px;
+    }
+
+    .skills-grid, 
+    .projects-grid {
+        flex-direction: column; /* Stacked grid items for smaller screens */
+        align-items: center;
+        gap: 20px;
+        padding: 10px 15px;
+    }
+
+    .skill-card, 
+    .project-card {
+        width: 90%; /* Cards take up most of the screen width on mobile */
+        max-width: 350px; /* Max width for larger cards */
+        margin-bottom: 20px;
+    }
+
+    .container {
+        padding: 10px 15px; /* Smaller padding for mobile */
+    }
+}
+
+/* Media Query for Very Small Screens (Extra Small Devices like Phones) */
+@media screen and (max-width: 480px) {
+
+    .header-content h1 {
+        font-size: 1.5rem; /* Further reduce font size for very small screens */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .header-content p {
+        font-size: 0.9rem; /* Even smaller font size for better mobile experience */
+        text-align: center;
+        line-height: 1.4;
+        margin: 0 10px;
+    }
+
+    .skills-grid, 
+    .projects-grid {
+        flex-direction: column; /* Stacked grid items for small screens */
+        align-items: center;
+        gap: 15px; /* Reduced gap for very small screens */
+        padding: 10px 10px;
+    }
+
+    .skill-card, 
+    .project-card {
+        width: 95%; /* Increase width for small screens */
+        max-width: 320px; /* Max width for cards on very small screens */
+        margin-bottom: 15px; /* Reduce margin for mobile screens */
+    }
+
+    .container {
+        padding: 5px 10px; /* Minimal padding for smaller screens */
+    }
+}
