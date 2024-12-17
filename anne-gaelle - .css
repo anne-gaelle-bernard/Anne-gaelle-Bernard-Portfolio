@@ -274,9 +274,8 @@ body {
         display: flex;
         flex-direction: column; /* Stack navbar items vertically */
         align-items: center;
-        padding: 10px; /* Add padding for spacing */
-        background-color: #fff; /* Ensure clear visibility */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+
+      
     }
 
     }
