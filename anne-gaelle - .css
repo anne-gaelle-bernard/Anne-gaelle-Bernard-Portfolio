@@ -45,7 +45,6 @@ margin: 0;
   float: right;
   background-color: #04AA6D;
   color: white;
-  flex-direction:row;
  flex-wrap: nowrap;
 }
     
