@@ -27,37 +27,7 @@ body {
 }
 
 /* Navigation */
-nav {
-    width: 100%;
-    float: left;
-    padding: 0;
-    list-style: none;
-    background-color: #f2f2f2;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc; }
-nav li {
-    float: left;
-    text-align:center; }
-nav li a {
-    display: block;
-    padding: 8px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    text-align:center;
-    color: #069;
-    border-right: 1px solid #ccc; }
-nav li a:hover {
-    color: #c00;
-    text-align:center;
-    background-color: #fff;}
-    /* End navigation bar styling. */
 
-content {
-    padding: 0 50px 50px;
-    width:1000px;
-    height:800px;
-    background-color:#FFF;
-}
 /* Header */
 .header-section {
     height: 100vh;
