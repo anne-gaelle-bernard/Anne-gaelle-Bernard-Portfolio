@@ -35,14 +35,17 @@ body {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
-    padding: 100px 0;
+    padding: 20px 0; /* Reduced for better responsiveness */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional for a slight elevation effect */
 }
 
 .navbar-nav {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 100px;
+    gap: 50px; /* Adjusted for better spacing on all screen sizes */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-nav a {
@@ -61,18 +64,19 @@ body {
     bottom: -5px;
     left: 50%;
     background-color: var(--primary-color);
-    transition: width 0.3s ease;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
-.navbar-nav a:hover::after {
+.navbar-nav a:hover::after,
+.navbar-nav a:focus::after {
     width: 100%;
     left: 0;
 }
 
-.navbar-nav a:hover {
+.navbar-nav a:hover,
+.navbar-nav a:focus {
     color: var(--primary-color);
 }
-
 /* Header */
 .header-section {
     height: 100vh;
