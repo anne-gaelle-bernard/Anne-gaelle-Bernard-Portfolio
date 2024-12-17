@@ -279,15 +279,6 @@ body {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
     }
 
-    .navbar-nav {
-        display: flex;
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: center;
-        gap: 15px; /* Add spacing between nav items */
-        width: 100%; /* Ensure nav spans full width */
-        padding: 0;
-        margin: 0;
-        list-style: none; /* Remove bullets */
     }
 
     .navbar-nav li {
@@ -306,15 +297,6 @@ body {
     }
 
 
-    .navbar-collapse {
-        display: none; /* Hide by default */
-        flex-direction: column;
-        width: 100%; /* Full width on small screens */
-    }
-
-    .navbar-collapse.active {
-        display: flex; /* Show when active */
-    }
 
     .header-content h1 {
         font-size: 2rem; 
