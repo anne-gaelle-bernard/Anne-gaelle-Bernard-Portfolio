@@ -270,16 +270,77 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
- .navbar {
-      
-    position: absolute;
+
+
+    @media screen and (max-width: 768px) {
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top for easy access */
     right: 0;
     top: 0;
-    float: none;
-    display: block;
-    text-align: left;
+    width: 100%; /* Ensures full-width on smaller screens */
+    display: flex; /* Enables flexbox layout for content alignment */
+    flex-direction: column; /* Stack items vertically */
+    background-color: #fff; /* Set a solid background for visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    z-index: 1000; /* Ensures navbar is above other elements */
   }
-   
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: flex-start; /* Align items to the left for text alignment */
+    padding: 10px 20px; /* Add padding for better spacing */
+    gap: 10px; /* Add space between nav items */
+  }
+
+  .navbar-nav li {
+    list-style: none; /* Remove bullets for a clean look */
+    width: 100%; /* Full-width items */
+  }
+
+  .navbar-nav a {
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust for readability */
+    color: #333; /* Neutral color for text */
+    padding: 10px; /* Add touch-friendly spacing */
+    display: block; /* Ensure links span full width */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+
+  .navbar-nav a:hover {
+    background-color: #f4f4f4; /* Light gray background on hover */
+    color: #000; /* Darker text color for contrast */
+  }
+
+  .navbar-toggle {
+    position: absolute; /* Position toggle for easy access */
+    top: 10px;
+    right: 15px;
+    background-color: #333; /* Dark background for toggle button */
+    color: #fff; /* White color for icon/text */
+    border: none;
+    font-size: 1.5rem; /* Make it large for visibility */
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001; /* Ensure it stays above other elements */
+  }
+
+  .navbar-collapse {
+    display: none; /* Initially hide the navbar menu */
+    flex-direction: column;
+    width: 100%; /* Full width */
+  }
+
+  .navbar-collapse.active {
+    display: flex; /* Show navbar menu when active */
+  }
+}
+
 
 
     .header-content h1 {
