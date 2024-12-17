@@ -269,6 +269,8 @@ body {
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
   /* Navbar */
   .navbar {
     position: fixed; 
@@ -276,11 +278,7 @@ body {
     top: 0;
     width: 100%; /* Set full width for the navbar */
     display: flex; 
-  
-    display: none; /* Hidden by default */
     flex-direction: column; 
-    width: 100%; 
-  
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     z-index: 1000; 
@@ -394,3 +392,4 @@ body {
     padding: 10px 15px; /* Add consistent padding */
   }
 }
+ 
