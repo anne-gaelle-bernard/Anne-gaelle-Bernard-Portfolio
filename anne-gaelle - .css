@@ -248,9 +248,6 @@ margin: 0;
     .navbar {
         flex-direction: column;
         padding: 10px;
-    }
-
-    .navbar a {
         margin: 5px 0;
     }
 }
