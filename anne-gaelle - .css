@@ -31,17 +31,14 @@ body {
 
 .navbar {
 margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
   float: center;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  background-color: #ddd;
-  float: center;
   color: white;
  
 }
