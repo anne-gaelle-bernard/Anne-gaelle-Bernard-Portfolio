@@ -272,66 +272,49 @@ body {
 
     @media screen and (min-width: 320px) and (max-width: 768px) {
         
-  .navbar {
-    flex-direction: column;
-    flex: none;
-    padding: 10px;
-    background:#black;
-  }
+ @media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        background-color: black;
+    }
 
+    .navbar-nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
 
-  /* Header Content */
-  .header-content h1 {
-    font-size: 1.8rem; 
-    text-align: center; 
-    margin-bottom: 15px; 
-    padding: 0 10px;
-  }
+    .header-content h1 {
+        font-size: 1.8rem; 
+        text-align: center; 
+        margin-bottom: 15px; 
+        padding: 0 10px;
+    }
 
-  .header-content p {
-    font-size: 1rem; 
-    text-align: center; 
-    line-height: 1.5; 
-    margin: 0 15px; 
-  }
+    .header-content p {
+        font-size: 1rem; 
+        text-align: center; 
+        line-height: 1.5; 
+        margin: 0 15px; 
+    }
 
-  /* Grid Containers */
-  .skills-grid, .projects-grid {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 20px; 
-    padding: 10px 15px; 
-  }
+    .skills-grid, 
+    .projects-grid {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        padding: 10px 15px; 
+    }
 
-  /* Cards */
-  .skill-card, .project-card {
-    width: 90%; 
-    max-width: 350px;
-    margin-bottom: 20px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    padding: 15px; 
-  }
+    .skill-card, 
+    .project-card {
+        width: 90%; 
+        max-width: 350px;
+        margin-bottom: 20px; 
+    }
 
-  .button, .link {
-    font-size: 1rem; 
-    padding: 12px 20px; 
-    margin: 10px 0; 
-    width: auto; 
-    text-align: center; 
-    border: 1px solid #333; 
-    border-radius: 5px; 
-    transition: background-color 0.3s ease;
-  }
-
-  .button:hover, .link:hover {
-    background-color: #333; 
-    color: #fff; 
-  }
-
-
-  .container {
-    padding: 10px 15px; 
-  }
+    .container {
+        padding: 10px 15px; 
+    }
 }
- 
