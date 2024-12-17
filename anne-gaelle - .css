@@ -23,20 +23,20 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
-    margin: 0 ;
+    margin: 0;
     padding: 0 15px;
 }
 
-/* Navigation */
-
-/* Header */
+/* Header Section */
 .header-section {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
                 url('https://images.unsplash.com/photo-1522252234503-e356532cafd5') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -48,7 +48,7 @@ body {
 .header-content {
     max-width: 800px;
     padding: 40px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
     text-align: center;
     display: flex;
@@ -70,7 +70,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Sections */
+/* Section Styles */
 .section {
     padding: 80px 0;
     text-align: center;
@@ -83,16 +83,9 @@ body {
     font-size: 2.5rem;
 }
 
-/* About Section */
-.about-section p {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    color: var(--light-text-color);
-}
-
 /* Skills Section */
 .skills-section {
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .skills-grid {
@@ -144,7 +137,7 @@ body {
 
 /* Projects Section */
 .projects-section {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .projects-grid {
@@ -199,10 +192,6 @@ body {
     box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
 }
 
-.scroll-btn {
-    margin-top: 30px;
-}
-
 /* Footer */
 .site-footer {
     background-color: var(--secondary-color);
@@ -227,108 +216,97 @@ body {
     color: var(--light-text-color);
 }
 
-/* Media Query for Screens Smaller than 768px */
-/* General Styles - For larger screens (tablet, desktop, etc.) */
-@media screen and (min-width: 769px) {
+/* Media Queries */
 
+/* For larger screens (tablets, desktops, etc.) */
+@media screen and (min-width: 769px) {
     .header-content h1 {
-        font-size: 4rem; /* Larger font for larger screens */
+        font-size: 4rem;
         text-align: center;
     }
 
     .header-content p {
-        font-size: 1.5rem; /* Larger paragraph font */
+        font-size: 1.5rem;
         text-align: center;
     }
 
-    .skills-grid, 
-    .projects-grid {
-        flex-direction: row; /* Grid items side by side for larger screens */
+    .skills-grid, .projects-grid {
+        flex-direction: row;
         align-items: flex-start;
         gap: 20px;
     }
 
-    .skill-card, 
-    .project-card {
-        width: 250px; /* Standard width for cards */
-        max-width: 100%;
+    .skill-card, .project-card {
+        width: 250px;
         margin-bottom: 20px;
     }
 
     .container {
-        padding: 20px 30px; /* Padding for larger screens */
+        padding: 20px 30px;
     }
 }
 
-/* Media Query for Screens Smaller than 768px (Phones, small tablets) */
+/* For smaller screens (phones, small tablets) */
 @media screen and (max-width: 768px) {
-
     .header-content h1 {
-        font-size: 1.8rem; /* Smaller font size for smaller screens */
+        font-size: 1.8rem;
         text-align: center;
         margin-bottom: 15px;
-        padding: 0 10px; /* Padding adjustment for mobile */
+        padding: 0 10px;
     }
 
     .header-content p {
-        font-size: 1rem; /* Smaller font size for better readability */
+        font-size: 1rem;
         text-align: center;
         line-height: 1.5;
         margin: 0 15px;
     }
 
-    .skills-grid, 
-    .projects-grid {
-        flex-direction: column; /* Stacked grid items for smaller screens */
+    .skills-grid, .projects-grid {
+        flex-direction: column;
         align-items: center;
         gap: 20px;
         padding: 10px 15px;
     }
 
-    .skill-card, 
-    .project-card {
-        width: 90%; /* Cards take up most of the screen width on mobile */
-        max-width: 350px; /* Max width for larger cards */
+    .skill-card, .project-card {
+        width: 90%;
+        max-width: 350px;
         margin-bottom: 20px;
     }
 
     .container {
-        padding: 10px 15px; /* Smaller padding for mobile */
+        padding: 10px 15px;
     }
 }
 
-/* Media Query for Very Small Screens (Extra Small Devices like Phones) */
+/* For very small screens (extra-small devices, max width 480px) */
 @media screen and (max-width: 480px) {
-
     .header-content h1 {
-        font-size: 1.5rem; /* Further reduce font size for very small screens */
-        text-align: center;
+        font-size: 1.5rem;
         margin-bottom: 10px;
     }
 
     .header-content p {
-        font-size: 0.9rem; /* Even smaller font size for better mobile experience */
-        text-align: center;
+        font-size: 0.9rem;
         line-height: 1.4;
         margin: 0 10px;
     }
 
-    .skills-grid, 
-    .projects-grid {
-        flex-direction: column; /* Stacked grid items for small screens */
+    .skills-grid, .projects-grid {
+        flex-direction: column;
         align-items: center;
-        gap: 15px; /* Reduced gap for very small screens */
+        gap: 15px;
         padding: 10px 10px;
     }
 
-    .skill-card, 
-    .project-card {
-        width: 95%; /* Increase width for small screens */
-        max-width: 320px; /* Max width for cards on very small screens */
-        margin-bottom: 15px; /* Reduce margin for mobile screens */
+    .skill-card, .project-card {
+        width: 95%;
+        max-width: 320px;
+        margin-bottom: 15px;
     }
 
     .container {
-        padding: 5px 10px; /* Minimal padding for smaller screens */
+        padding: 5px 10px;
     }
 }
