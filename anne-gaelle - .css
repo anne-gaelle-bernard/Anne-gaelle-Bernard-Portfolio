@@ -21,13 +21,15 @@ html, body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     overflow-x: hidden;
 }
 
@@ -36,6 +38,9 @@ body {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header Section */
@@ -70,6 +75,7 @@ body {
     color: var(--primary-color);
     margin-bottom: 15px;
     width: 100%;
+    text-align: center;
 }
 
 .header-content p {
@@ -77,12 +83,14 @@ body {
     color: var(--light-text-color);
     margin-bottom: 20px;
     max-width: 100%;
+    text-align: center;
 }
 
 /* Section Styles */
 .section {
     width: 100%;
-    padding: 80px 0;
+    max-width: 1200px;
+    padding: 80px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,11 +103,13 @@ body {
     font-family: 'Cardo', serif;
     font-size: clamp(2rem, 4vw, 2.5rem);
     width: 100%;
+    text-align: center;
 }
 
 /* Skills Section */
 .skills-section {
     background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
 }
 
 .skills-grid {
@@ -108,7 +118,7 @@ body {
     justify-content: center;
     gap: 20px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -119,20 +129,19 @@ body {
     border-radius: 10px;
     width: calc(33.333% - 20px);
     min-width: 250px;
+    max-width: 350px;
     flex-grow: 1;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.skill-card:hover {
-    transform: scale(1.05);
+    margin: 10px;
 }
 
 /* Projects Section */
 .projects-section {
     background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
 }
 
 .projects-grid {
@@ -141,7 +150,7 @@ body {
     justify-content: center;
     gap: 30px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -152,71 +161,17 @@ body {
     padding: 20px;
     width: calc(33.333% - 30px);
     min-width: 250px;
+    max-width: 350px;
     flex-grow: 1;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-image {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
-}
-
-/* Footer */
-.site-footer {
-    width: 100%;
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
-    text-align: center;
-    padding: 40px 0;
-}
-
-.social-links {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-links a {
-    color: var(--primary-color);
-    margin: 0 15px;
-    font-size: 2rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--light-text-color);
+    margin: 10px;
 }
 
 /* Responsive Adjustments */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .skill-card, .project-card {
         width: calc(50% - 20px);
     }
@@ -233,16 +188,31 @@ body {
     }
 
     .section {
-        padding: 40px 0;
+        padding: 40px 15px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .header-content {
         padding: 15px;
+        width: 95%;
     }
 
     .section h2 {
         font-size: 1.8rem;
     }
+}
+
+/* Additional Centering Improvements */
+.skills-section, .projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
