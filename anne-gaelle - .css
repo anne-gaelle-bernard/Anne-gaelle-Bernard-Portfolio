@@ -32,7 +32,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 101px;
+    height:100px;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 100;
     padding: 20px 0; /* Reduced for better responsiveness */
