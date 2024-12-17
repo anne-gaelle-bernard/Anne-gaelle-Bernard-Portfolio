@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100px;
+    max-width: auto;
     margin: 0;
     padding: 0 px;
 }
