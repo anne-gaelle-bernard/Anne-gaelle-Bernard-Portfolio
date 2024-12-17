@@ -271,20 +271,14 @@ body {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
  .navbar {
-        display: flex;
-        flex-direction: column; /* Stack navbar items vertically */
-        align-items: center;
-
       
-    }
-
-    }
-
-    .navbar-nav li {
-        width: 100%; /* Full-width items */
-        text-align: center; /* Center text for nav items */
-    }
-
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: none;
+    display: block;
+    text-align: left;
+  }
    
 
 
