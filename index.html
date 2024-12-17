@@ -7,19 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./anne-gaelle - .css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <ul class="navbar-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container">
+            <ul class="navbar-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Header -->
@@ -27,6 +29,7 @@
         <div class="header-content">
             <h1>Anne-Gaëlle Bernard</h1>
             <p>Software Developer</p>
+            <a href="#about" class="btn scroll-btn">Discover More</a>
         </div>
     </header>
 
@@ -39,7 +42,7 @@
             continuous desire to learn and grow. I specialize in crafting responsive, efficient web 
             solutions that not only look great but also deliver exceptional performance.
         </p>
-        <a href="CV_2024-05-22_Anne-gaelle_BERNARD...pdf" class="btn" download>Download CV</a>
+        <a href="CV_2024-05-22_Anne-gaelle_BERNARD.pdf" class="btn" download>Download CV</a>
     </section>
 
     <!-- Skills Section -->
@@ -49,18 +52,33 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>Programming Languages</h3>
-                    <p>HTML5, CSS3, JavaScript<br>Node.js, Python</p>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
                     <h3>Tools & Technologies</h3>
-                    
-               
-
-                    <p>Git, VS Code, Figma<br>Responsive Design, UI/UX</p>
+                    <ul>
+                        <li>Git</li>
+                        <li>VS Code</li>
+                        <li>Figma</li>
+                        <li>Responsive Design</li>
+                        <li>UI/UX</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
                     <h3>Soft Skills</h3>
-                    <p>Problem Solving<br>Communication<br>Teamwork</p>
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Adaptability</li>
+                        <li>Continuous Learning</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -69,17 +87,16 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <h2>Project</h2>
+            <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>TicTacToe </h3>
-                   <!--<video controls-->
-                        <!--source src="" type="video/mp4"-->
-                    <img src="https://cdn-icons-png.flaticon.com/512/10199/10199746.png" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 512px; height: 100px; margin: 0px; width: 100px;" alt="Tic tac toe - Icônes le jeu gratuites" jsname="kn3ccd" aria-hidden="false">
-                    <a href=https://github.com/anne-gaelle-bernard/Tic-tac-toe-project</a>
-
+                    <h3>TicTacToe Game</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/10199/10199746.png" alt="Tic Tac Toe Project" class="project-image">
+                    <div class="project-links">
+                        <a href="https://github.com/anne-gaelle-bernard/Tic-tac-toe-project" class="btn" target="_blank">View on GitHub</a>
+                    </div>
                 </div>
-                
+                <!-- Add more project cards as needed -->
             </div>
         </div>
     </section>
@@ -89,8 +106,7 @@
         <div class="container">
             <h2>Let's Connect</h2>
             <p>Interested in collaboration or have a project in mind?</p>
-            <a href="anne-gaelle.bernard@laplateforme.io
-            " class="btn">Contact Me</a>
+            <a href="mailto:anne-gaelle.bernard@laplateforme.io" class="btn">Contact Me</a>
         </div>
     </section>
 
@@ -98,18 +114,21 @@
     <footer class="site-footer">
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/anne-gaelle-bernard" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bernard-anne-gaelle" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="anne-gaelle.bernard@laplateforme.io  "><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/anne-gaelle-bernard" target="_blank" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/bernard-anne-gaelle" target="_blank" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:anne-gaelle.bernard@laplateforme.io" aria-label="Send Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
             <p>&copy; 2024 Anne-Gaëlle Bernard. All Rights Reserved.</p>
-            
-   
         </div>
     </footer>
 </body>
 </html>
-
 
 
     <!-- End of the code for noow -->
