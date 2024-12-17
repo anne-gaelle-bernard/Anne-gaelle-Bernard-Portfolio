@@ -28,56 +28,26 @@ body {
 }
 
 /* Navigation */
+
 .navbar {
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: #333; 
-  color: black;
-  padding: 0;
+margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background-color: #333;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   font-size: 17px;
+  background-color: #ddd;
+  color: black;
+  float: right;
+  background-color: #04AA6D;
+  color: white;
 }
+    
 
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-nav a {
-    text-decoration: none;
-    color: var(--light-text-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-    letter-spacing: 1px;
-}
-
-.navbar-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-.navbar-nav a:hover::after,
-.navbar-nav a:focus::after {
-    width: 100%;
-    left: 0;
-}
-
-.navbar-nav a:hover,
-.navbar-nav a:focus {
-    color: var(--primary-color);
-}
 
 /* Header */
 .header-section {
