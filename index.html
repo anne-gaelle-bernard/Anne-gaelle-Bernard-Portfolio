@@ -11,22 +11,25 @@
     <link rel="stylesheet" href=" anne-gaelle - .css">
 </head>
 <body>
-    <!-- Navigation 
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
+            <div class="logo">Anne-Gaëlle Bernard</div>
             <ul class="navbar-nav">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
--->
+
     <!-- Header -->
     <header id="home" class="header-section">
         <div class="header-content">
             <h1>Anne-Gaëlle Bernard</h1>
-            <p>Web Developer</p>
+            <p>Web Developer | Creative Problem Solver</p>
             <a href="#about" class="btn scroll-btn">Discover More</a>
         </div>
     </header>
@@ -34,12 +37,14 @@
     <!-- About Section -->
     <section id="about" class="section about-section container">
         <h2>About Me</h2>
-        <p>
-            I'm a passionate web developer with a keen eye for detail and a love for creating elegant, 
-            user-friendly digital experiences. My journey in technology is driven by curiosity and a 
-            continuous desire to learn and grow. I specialize in crafting responsive, efficient web 
-            solutions that not only look great but also deliver exceptional performance.
-        </p>
+        <div class="about-content">
+            <p>
+                I'm a passionate web developer with a keen eye for detail and a love for creating elegant, 
+                user-friendly digital experiences. My journey in technology is driven by curiosity and a 
+                continuous desire to learn and grow. I specialize in crafting responsive, efficient web 
+                solutions that not only look great but also deliver exceptional performance.
+            </p>
+        </div>
         <a href="CV_2024-05-22_Anne-gaelle_BERNARD.pdf" class="btn" download>Download CV</a>
     </section>
 
@@ -59,23 +64,23 @@
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>Tools & Technologies</h3>
+                    <h3>Frameworks & Libraries</h3>
                     <ul>
-                        <li>Git</li>
-                        <li>VS Code</li>
-                        <li>Figma</li>
-                        <li>Responsive Design</li>
-                        <li>UI/UX</li>
+                        <li>React</li>
+                        <li>Express.js</li>
+                        <li>Bootstrap</li>
+                        <li>jQuery</li>
+                        <li>Django</li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>Soft Skills</h3>
+                    <h3>Tools & Technologies</h3>
                     <ul>
-                        <li>Problem Solving</li>
-                        <li>Communication</li>
-                        <li>Teamwork</li>
-                        <li>Adaptability</li>
-                        <li>Continuous Learning</li>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Figma</li>
+                        <li>Responsive Design</li>
+                        <li>Agile Methodologies</li>
                     </ul>
                 </div>
             </div>
@@ -90,11 +95,21 @@
                 <div class="project-card">
                     <h3>TicTacToe Game</h3>
                     <img src="https://cdn-icons-png.flaticon.com/512/10199/10199746.png" alt="Tic Tac Toe Project" class="project-image">
+                    <p class="project-description">A responsive multiplayer Tic Tac Toe game built with JavaScript</p>
                     <div class="project-links">
                         <a href="https://github.com/anne-gaelle-bernard/Tic-tac-toe-project" class="btn" target="_blank">View on GitHub</a>
+                        <a href="#" class="btn" target="_blank">Live Demo</a>
                     </div>
                 </div>
-                <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Portfolio Project" class="project-image">
+                    <p class="project-description">Responsive personal portfolio website showcasing skills and projects</p>
+                    <div class="project-links">
+                        <a href="#" class="btn" target="_blank">View on GitHub</a>
+                        <a href="#" class="btn" target="_blank">Live Demo</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -103,8 +118,11 @@
     <section id="contact" class="section contact-section">
         <div class="container">
             <h2>Let's Connect</h2>
-            <p>Interested in collaboration or have a project in mind?</p>
-            <a href="mailto:anne-gaelle.bernard@laplateforme.io" class="btn">Contact Me</a>
+            <p>Interested in collaboration or have a project in mind? Feel free to reach out!</p>
+            <div class="contact-methods">
+                <a href="mailto:anne-gaelle.bernard@laplateforme.io" class="btn">Email Me</a>
+                <a href="https://www.linkedin.com/in/bernard-anne-gaelle" class="btn" target="_blank">LinkedIn</a>
+            </div>
         </div>
     </section>
 
@@ -125,8 +143,7 @@
             <p>&copy; 2024 Anne-Gaëlle Bernard. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-    <!-- End of the code for noow -->
