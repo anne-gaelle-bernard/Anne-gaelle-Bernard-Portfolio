@@ -57,9 +57,10 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+     letter-spacing: 15px;
 }
 
-  letter-spacing: 5px;
+ 
 
 .navbar-nav a::after {
     content: '';
