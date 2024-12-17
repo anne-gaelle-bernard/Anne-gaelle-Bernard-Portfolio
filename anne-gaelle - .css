@@ -275,7 +275,7 @@ body {
         
  @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         padding: 10px;
         background-color: black;
     }
