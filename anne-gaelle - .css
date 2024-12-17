@@ -273,7 +273,7 @@ body {
     @media screen and (min-width: 320px) and (max-width: 768px) {
         
   .navbar {
-    justify-content: flex-start; /* Align navbar items to the left on larger screens */
+    justify-content: flex;
   }
 
 
