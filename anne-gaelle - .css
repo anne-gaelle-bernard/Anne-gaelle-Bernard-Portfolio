@@ -285,16 +285,7 @@ body {
         text-align: center; /* Center text for nav items */
     }
 
-    .navbar-nav a {
-        text-decoration: none;
-        font-size: 1rem; /* Adjust for readability */
-        color: #333; /* Ensure text is visible */
-        padding: 10px 20px; /* Add padding for touch targets */
-        display: block; /* Make links span the full width */
-        border-radius: 5px; /* Optional: Rounded edges */
-        transition: background-color 0.3s ease;
-    }
-
+   
 
 
     .header-content h1 {
