@@ -269,7 +269,7 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) {
 
 
     @media screen and (max-width: 768px) {
