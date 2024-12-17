@@ -271,70 +271,15 @@ body {
 
 
     @media screen and (min-width: 320px) and (max-width: 768px) {
-  
-/* Navbar */
   .navbar {
-    position: fixed; 
-    right: 0;
-    top: 0;
-    width: 100%; 
-    display: block; 
-    flex-direction: column; 
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    z-index: 1000; 
-    padding: 10px; 
-  }
-
-  .navbar-nav {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 15px; 
-    padding: 0; 
-    margin: 0; 
-  }
-
-  .navbar-nav li {
-    list-style: none; 
-    width: 100%; /* Full width for items */
-  }
-
-  .navbar-nav a {
-    text-decoration: none; 
-    font-size: 1rem; 
-    color: #333; 
-    padding: 10px 15px;
-    display: block; 
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-
-  .navbar-nav a:hover {
-    background-color: #f4f4f4; 
-    color: #000; 
-  }
-
-  /* Toggle Button */
-  .navbar-toggle {
-    position: absolute; 
-    top: 10px;
-    right: 15px;
-    background-color: #333; 
-    color: #fff;
-    border: none; 
-    font-size: 1.5rem; 
-    width: 40px; 
-    height: 40px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    z-index: 1001; 
-  }
-
-
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
 
   /* Header Content */
