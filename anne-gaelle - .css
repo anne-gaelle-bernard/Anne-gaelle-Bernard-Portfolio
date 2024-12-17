@@ -46,6 +46,7 @@ margin: 0;
   background-color: #04AA6D;
   color: white;
   flex-direction:row;
+  justify-content: center;  
 }
     
 
