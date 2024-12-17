@@ -331,16 +331,9 @@ body {
     z-index: 1001; 
   }
 
-  /* Collapsible Menu */
-  .navbar-collapse {
-    display: none; /* Hidden by default */
-    flex-direction: column; 
-    width: 100%; 
-  }
 
-  .navbar-collapse.active {
-    display: flex; /* Show when toggled */
-  }
+
+
 
   /* Header Content */
   .header-content h1 {
