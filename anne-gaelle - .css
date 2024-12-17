@@ -305,26 +305,6 @@ body {
         transition: background-color 0.3s ease;
     }
 
-    .navbar-nav a:hover {
-        background-color: #f0f0f0; /* Highlight on hover */
-        color: #000; /* Optional: Darker text on hover */
-    }
-
-    /* Optional: Add a toggle button for collapsing */
-    .navbar-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #333; /* Button background */
-        color: #fff; /* Button text color */
-        font-size: 1.5rem;
-        width: 40px;
-        height: 40px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
 
     .navbar-collapse {
         display: none; /* Hide by default */
