@@ -1,308 +1,201 @@
-:root {
-    --primary-color: #ffc107;
-    --secondary-color: #000;
-    --light-text-color: #f0f0f0;
-    --text-color: #fff;
-    --background-color: #121212;
-    --card-background: rgba(255, 255, 255, 0.1);
-    --hover-color: #ffca28;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anne-Gaëlle Bernard - Web Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href=" anne-gaelle - .css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="navbar-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
-}
+    <!-- Header -->
+    <header id="home" class="header-section">
+        <div class="header-content">
+            <h1>Anne-Gaëlle Bernard</h1>
+            <p>Web Developer | Creative Problem Solver</p>
+            <a href="#about" class="btn scroll-btn">Discover More</a>
+        </div>
+    </header>
+<br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <!-- About Section -->
+    <section id="about" class="section about-section container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                I'm a passionate web developer with a keen eye for detail and a love for creating elegant, 
+                user-friendly digital experiences. My journey in technology is driven by curiosity and a 
+                continuous desire to learn and grow. I specialize in crafting responsive, efficient web 
+                solutions that not only look great but also deliver exceptional performance.
+            </p>
+        </div>
+        <a href="CV_2024-05-22_Anne-gaelle_BERNARD.pdf" class="btn" download>Download CV</a>
+    </section>
+<span></span>
+    <span></span>
+<span></span>
+<span></span>
+    <br> 
+    <br> 
+    <br> 
+    <br> 
 
-html, body {
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Express.js</li>
+                        <li>Bootstrap</li>
+                        <li>jQuery</li>
+                        <li>Django</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Technologies</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Figma</li>
+                        <li>Responsive Design</li>
+                        <li>Agile Methodologies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+    <br> 
+<br> 
+    <br> 
+    <br> 
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>TicTacToe Game</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/10199/10199746.png" alt="Tic Tac Toe Project" class="project-image">
+                    <p class="project-description">A responsive multiplayer Tic Tac Toe game built with JavaScript</p>
+                    <div class="project-links">
+                        <a href="https://github.com/anne-gaelle-bernard/Tic-tac-toe-project" class="btn" target="_blank">View on GitHub</a>
+                        <a href="#" class="btn" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3> Website</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Website Project" class="project-image">
+                    <p class="project-description">website showcasing skills and projects</p>
+                    <div class="project-links">
+                        <a href="https://github.com/anne-gaelle-bernard/tv-shows" class="btn" target="_blank">View on GitHub</a>
+                        <a href="https://anne-gaelle-bernard.github.io/tv-shows/" class="btn" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         </div>
+                <div class="project-card">
+                    <h3> Website</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Website Project" class="project-image">
+                    <p class="project-description"> Travel website  showcasing skills and projects</p>
+                    <div class="project-links">
+                        <a href="https://github.com/anne-gaelle-bernard/tv-shows" class="btn" target="_blank">View on GitHub</a>
+                        <a href="https://anne-gaelle-bernard.github.io/Travel/#s1" class="btn" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+                    <h3> Website</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Website Project" class="project-image">
+                    <p class="project-description"> Artist website  showcasing skills and projects</p>
+                    <div class="project-links">
+                        <a href="https://github.com/anne-gaelle-bernard/artist" class="btn" target="_blank">View on GitHub</a>
+                        <a href="https://anne-gaelle-bernard.github.io/artist/" class="btn" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
-}
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p>Interested in collaboration or have a project in mind? Feel free to reach out!</p>
+            <div class="contact-methods">
+                <a href="mailto:anne-gaelle.bernard@laplateforme.io" class="btn">Email Me</a>
+                <a href="https://www.linkedin.com/in/bernard-anne-gaelle" class="btn" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
 
-/* Navigation */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    padding: 20px 0;
-}
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/anne-gaelle-bernard" target="_blank" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/bernard-anne-gaelle" target="_blank" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:anne-gaelle.bernard@laplateforme.io" aria-label="Send Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
 
-.navbar .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+            <span></span>
+<span></span>
+<span></span>
+              <span></span>
+<span></span>
+<span></span>
+                          <span></span>
+<span></span>
+<span></span>
+            <p>&copy; 2024 Anne-Gaëlle Bernard. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-.logo {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar-nav {
-    display: flex;
-    list-style: none;
-}
-
-.navbar-nav li {
-    margin-left: 20px;
-}
-
-.navbar-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav a:hover {
-    color: var(--primary-color);
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Sections Spacing */
-.section {
-    width: 100%;
-    padding: 100px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 40px;
-}
-
-.section h2 {
-    color: var(--primary-color);
-    margin-bottom: 40px;
-    font-family: 'Cardo', serif;
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    width: 100%;
-    text-align: center;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 15px;
-    text-align: center;
-}
-
-.btn:hover {
-    background-color: var(--hover-color);
-    transform: scale(1.05);
-}
-
-/* Header Section */
-.header-section {
-    width: 100%;
-    height: 100vh;
-    margin-top: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('https://images.unsplash.com/photo-1522252234503-e356532cafd5') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 80px; /* Accommodate fixed navbar */
-}
-
-.header-content {
-    width: 90%;
-    max-width: 800px;
-    padding: 50px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.header-content h1 {
-    font-family: 'Cardo', serif;
-    font-size: clamp(2rem, 5vw, 4rem);
-    color: var(--primary-color);
-}
-
-.header-content p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: var(--light-text-color);
-}
-
-/* Skills Section */
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
-}
-
-.skill-card {
-    background-color: var(--card-background);
-    padding: 30px;
-    border-radius: 10px;
-    width: calc(33.333% - 30px);
-    min-width: 250px;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: scale(1.05);
-}
-
-.skill-card h3 {
-    margin-bottom: 15px;
-}
-
-.skill-card ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Projects Section */
-.projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
-}
-
-.project-card {
-    background-color: var(--card-background);
-    border-radius: 10px;
-    padding: 30px;
-    width: calc(33.333% - 30px);
-    min-width: 250px;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card img {
-    max-width: 150px;
-    margin-bottom: 15px;
-}
-
-.project-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.project-description {
-    color: var(--light-text-color);
-    text-align: center;
-}
-
-/* Contact Section */
-.contact-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.contact-methods {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Footer */
-.site-footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 100%;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.social-links a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 1024px) {
-    .skill-card, .project-card {
-        width: calc(50% - 30px);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .navbar-nav {
-        display: none; /* Placeholder for mobile menu */
-    }
-
-    .skill-card, .project-card {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .contact-methods {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section {
-        padding: 60px 15px;
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>
