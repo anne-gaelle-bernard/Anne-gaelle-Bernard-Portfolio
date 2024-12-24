@@ -191,7 +191,7 @@ body {
 
 .skill-card ul {
     list-style-type: none;
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 10px;
 }
