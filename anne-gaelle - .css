@@ -174,8 +174,8 @@ body {
     width: calc(33.333% - 30px);
     min-width: 250px;
     max-width: 350px;
-    display: grid;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
     transition: transform 0.3s ease;
@@ -192,7 +192,7 @@ body {
 .skill-card ul {
     list-style-type: none;
     display: grid;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
 }
 
