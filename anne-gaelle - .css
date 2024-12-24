@@ -160,7 +160,7 @@ body {
 
 /* Skills Section */
 .skills-grid {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
