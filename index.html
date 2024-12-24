@@ -8,222 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        .navbar {
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-        }
-
-        .logo {
-            font-family: 'Cardo', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .navbar-nav {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .navbar-nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .navbar-nav a:hover {
-            color: #007bff;
-        }
-
-        /* Header */
-        .header-section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/800');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-        }
-
-        .header-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-family: 'Cardo', serif;
-        }
-
-        /* Sections */
-        .section {
-            padding: 5rem 0;
-        }
-
-        h2 {
-            font-family: 'Cardo', serif;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .skill-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .skill-card h3 {
-            margin-bottom: 1rem;
-            color: #007bff;
-        }
-
-        .skill-card ul {
-            list-style: none;
-        }
-
-        .skill-card li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-card h3 {
-            padding: 1rem;
-            margin: 0;
-        }
-
-        .project-description {
-            padding: 0 1rem 1rem;
-        }
-
-        .project-links {
-            padding: 1rem;
-            display: flex;
-            gap: 1rem;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #0056b3;
-        }
-
-        /* Contact */
-        .contact-section {
-            background: #f8f9fa;
-            text-align: center;
-        }
-
-        .contact-methods {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        /* Footer */
-        .site-footer {
-            background: #333;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .social-links {
-            margin-bottom: 1rem;
-        }
-
-        .social-links a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #007bff;
-        }
-
-        @media (max-width: 768px) {
-            .navbar-nav {
-                display: none;
-            }
-
-            .header-content h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href=" anne-gaelle - .css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">Portfolio</div>
@@ -237,32 +25,43 @@
         </div>
     </nav>
 
+    <!-- Header -->
     <header id="home" class="header-section">
         <div class="header-content">
             <h1>Anne-Gaëlle Bernard</h1>
             <p>Web Developer | Creative Problem Solver</p>
-            <a href="#about" class="btn">Discover More</a>
+            <a href="#about" class="btn scroll-btn">Discover More</a>
         </div>
     </header>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>
-                    I'm a passionate web developer with a keen eye for detail and a love for creating elegant, 
-                    user-friendly digital experiences. My journey in technology is driven by curiosity and a 
-                    continuous desire to learn and grow. I specialize in crafting responsive, efficient web 
-                    solutions that not only look great but also deliver exceptional performance.
-                </p>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="CV_2024-05-22_Anne-gaelle_BERNARD.pdf" class="btn" download>Download CV</a>
-            </div>
+<br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <!-- About Section -->
+    <section id="about" class="section about-section container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                I'm a passionate web developer with a keen eye for detail and a love for creating elegant, 
+                user-friendly digital experiences. My journey in technology is driven by curiosity and a 
+                continuous desire to learn and grow. I specialize in crafting responsive, efficient web 
+                solutions that not only look great but also deliver exceptional performance.
+            </p>
         </div>
+        <a href="CV_2024-05-22_Anne-gaelle_BERNARD.pdf" class="btn" download>Download CV</a>
     </section>
+<span></span>
+    <span></span>
+<span></span>
+<span></span>
+    <br> 
+    <br> 
+    <br> 
+    <br> 
 
-    <section id="skills" class="section">
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
         <div class="container">
             <h2>My Skills</h2>
             <div class="skills-grid">
@@ -299,33 +98,61 @@
             </div>
         </div>
     </section>
-
-    <section id="projects" class="section">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+    <br> 
+<br> 
+    <br> 
+    <br> 
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
         <div class="container">
             <h2>Projects</h2>
-            <div class="projects-grid">
+            <!--<div class="projects-grid">
                 <div class="project-card">
-                    <img src="/api/placeholder/400/200" alt="Website Project" class="project-image">
-                    <h3>Portfolio Website</h3>
-                    <p class="project-description">Personal website showcasing skills and projects</p>
+                    <h3>TicTacToe Game</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/10199/10199746.png" alt="Tic Tac Toe Project" class="project-image">
+                    <p class="project-description">A responsive multiplayer Tic Tac Toe game built with JavaScript</p>
+                    <div class="project-links">
+                        <a href="https://github.com/anne-gaelle-bernard/Tic-tac-toe-project" class="btn" target="_blank">View on GitHub</a>
+                        <a href="#" class="btn" target="_blank">Live Demo</a>
+                    </div>
+                </div>-->
+                        <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3> Website</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Website Project" class="project-image">
+                    <p class="project-description">website showcasing skills and projects</p>
                     <div class="project-links">
                         <a href="https://github.com/anne-gaelle-bernard/tv-shows" class="btn" target="_blank">View on GitHub</a>
                         <a href="https://anne-gaelle-bernard.github.io/tv-shows/" class="btn" target="_blank">Live Demo</a>
                     </div>
                 </div>
+            </div>
+        </div>
+         </div>
+                                <div class="projects-grid">
+
                 <div class="project-card">
-                    <img src="/api/placeholder/400/200" alt="Travel Website Project" class="project-image">
-                    <h3>Travel Website</h3>
-                    <p class="project-description">Travel website showcasing destinations and experiences</p>
+                    <h3> Website</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Website Project" class="project-image">
+                    <p class="project-description"> Travel website  showcasing skills and projects</p>
                     <div class="project-links">
                         <a href="https://github.com/anne-gaelle-bernard/tv-shows" class="btn" target="_blank">View on GitHub</a>
                         <a href="https://anne-gaelle-bernard.github.io/Travel/#s1" class="btn" target="_blank">Live Demo</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="/api/placeholder/400/200" alt="Artist Website Project" class="project-image">
-                    <h3>Artist Website</h3>
-                    <p class="project-description">Artist portfolio website showcasing creative works</p>
+            </div>
+        </div>
+                                <div class="projects-grid">
+
+        <div class="project-card">
+                    <h3> Website</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Website Project" class="project-image">
+                    <p class="project-description"> Artist website  showcasing skills and projects</p>
                     <div class="project-links">
                         <a href="https://github.com/anne-gaelle-bernard/artist" class="btn" target="_blank">View on GitHub</a>
                         <a href="https://anne-gaelle-bernard.github.io/artist/" class="btn" target="_blank">Live Demo</a>
@@ -335,6 +162,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <h2>Let's Connect</h2>
@@ -346,6 +174,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="social-links">
@@ -359,8 +188,22 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
+
+            <span></span>
+<span></span>
+<span></span>
+              <span></span>
+<span></span>
+<span></span>
+                          <span></span>
+<span></span>
+<span></span>
             <p>&copy; 2024 Anne-Gaëlle Bernard. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+       
+      
