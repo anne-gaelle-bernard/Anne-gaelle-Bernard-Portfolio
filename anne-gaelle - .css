@@ -1,4 +1,16 @@
-  * {
+:root {
+    --primary-color: #ffc107;
+    --secondary-color: #000;
+    --light-text-color: #f0f0f0;
+    --text-color: #fff;
+    --background-color: #121212;
+    --card-background: rgba(255, 255, 255, 0.1);
+    --hover-color: #ffca28;
+}
+
+
+
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
