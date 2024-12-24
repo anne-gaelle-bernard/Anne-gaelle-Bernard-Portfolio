@@ -159,8 +159,9 @@ body {
 }
 
 /* Skills Section */
+/* Skills Section */
 .skills-grid {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
@@ -191,7 +192,7 @@ body {
 
 .skill-card ul {
     list-style-type: none;
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: 10px;
 }
