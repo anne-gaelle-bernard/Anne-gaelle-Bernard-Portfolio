@@ -1,214 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anne-Gaëlle Bernard - Web Developer Portfolio</title>
+    <title>Anne-Gaëlle Bernard - Développeuse Web & Cheffe de projet</title>
+    <meta name="description" content="Portfolio d'Anne-Gaëlle Bernard, développeuse web et chef de projet en alternance à La Plateforme.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href=" anne-gaelle - .css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="anne-gaelle - .css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Portfolio</div>
-            <ul class="navbar-nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="logo">AG<span>.</span>B</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header id="home" class="header-section">
-        <div class="header-content">
-            <h1>Anne-Gaëlle Bernard</h1>
-            <p>Développeuse Web | Chef de projet</p>
-            <a href="#about" class="btn scroll-btn">Discover More</a>
+    <!-- Hero -->
+    <header id="home" class="hero">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow reveal">Bonjour, je suis</p>
+            <h1 class="reveal">Anne-Gaëlle <span class="accent">Bernard</span></h1>
+            <p class="hero-subtitle reveal">Développeuse Web <span class="dot">•</span> Chef de projet</p>
+            <div class="hero-actions reveal">
+                <a href="#projects" class="btn btn-primary">Voir mes projets <i class="fas fa-arrow-right"></i></a>
+                <a href="CV_2026-09-16_Anne-gaelle_BERNARD.pdf" class="btn btn-ghost" download><i class="fas fa-download"></i> Télécharger mon CV</a>
+            </div>
         </div>
+        <a href="#about" class="scroll-indicator" aria-label="Défiler vers le bas"><span></span></a>
     </header>
-<br> 
-    <br> 
-    <br> 
-    <br> 
-    <br> 
-    <!-- About Section -->
-    <section id="about" class="section about-section container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                Jeune professionnelle issue d'une pédagogie par projet, j'ai acquis une pratique concrète
-                du développement front et back tout en coordonnant des équipes. Actuellement Chef de projet
-                en alternance à La Plateforme, je combine rigueur, esprit d'initiative et goût pour la
-                gestion de projet avec ma passion pour le développement web.
-            </p>
-        </div>
-        <a href="CV_2026-08-05_Anne-gaelle_BERNARD.pdf" class="btn" download>Download CV</a>
-    </section>
-<span></span>
-    <span></span>
-<span></span>
-<span></span>
-    <br> 
-    <br> 
-    <br> 
-    <br> 
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Frontend & Backend</h3>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>React.js</li>
-                        <li>Node.js / Express.js</li>
-                        <li>PHP</li>
-                        <li>Python</li>
-                    </ul>
+    <main>
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="section-heading reveal">
+                    <span class="section-number">01</span>
+                    <h2>À propos</h2>
                 </div>
-                <div class="skill-card">
-                    <h3>Bases de données</h3>
-                    <ul>
-                        <li>SQL (MySQL)</li>
-                        <li>PostgreSQL</li>
-                        <li>NoSQL (MongoDB)</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Outils & Technologies</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>Linux & Bash</li>
-                        <li>Docker</li>
-                        <li>CI/CD (GitHub Actions)</li>
-                        <li>API REST & WebSockets</li>
-                        <li>Figma</li>
-                        <li>Trello</li>
-                        <li>Méthodologies Agile</li>
+                <div class="about-text reveal">
+                    <p class="lead">
+                        Jeune professionnelle issue d'une pédagogie par projet, j'ai acquis une pratique concrète
+                        du développement front et back tout en coordonnant des équipes.
+                    </p>
+                    <p>
+                        Actuellement <strong>Chef de projet en alternance à La Plateforme</strong>, je combine rigueur,
+                        esprit d'initiative et goût pour la gestion de projet avec ma passion pour le développement web.
+                    </p>
+                    <ul class="about-highlights">
+                        <li><i class="fas fa-code"></i> Développement front &amp; back</li>
+                        <li><i class="fas fa-diagram-project"></i> Gestion de projet Agile</li>
+                        <li><i class="fas fa-users"></i> Coordination d'équipes</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-    <br> 
-<br> 
-    <br> 
-    <br> 
-    <!-- Projects Section -->
-   
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Website Project" class="project-image">
-                    <h3>Portfolio Website</h3>
-                    <p class="project-description">Personal website showcasing skills and projects</p>
-                    <div class="project-links">
-                        <a href="https://github.com/anne-gaelle-bernard/tv-shows" class="btn" target="_blank">View on GitHub</a>
-                        <a href="https://anne-gaelle-bernard.github.io/tv-shows/" class="btn" target="_blank">Live Demo</a>
-                    </div>
-                </div>
-                  
-                <div class="project-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Artist Website Project" class="project-image">
-                    <h3>Artist Website</h3>
-                    <p class="project-description">Artist portfolio website showcasing creative works</p>
-                    <div class="project-links">
-                        <a href="https://github.com/anne-gaelle-bernard/artist" class="btn" target="_blank">View on GitHub</a>
-                        <a href="https://anne-gaelle-bernard.github.io/artist/" class="btn" target="_blank">Live Demo</a>
-                    </div>
-                </div>
+        </section>
 
-                <div class="project-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Weather Project" class="project-image">
-                    <h3>Weather</h3>
-                    <p class="project-description">Application météo affichant les prévisions en temps réel</p>
-                    <div class="project-links">
-                        <a href="https://github.com/anne-gaelle-bernard/Weather.git" class="btn" target="_blank">View on GitHub</a>
-                        <a href="https://weather-production-661d.up.railway.app" class="btn" target="_blank">Live Demo</a>
-                    </div>
+        <!-- Skills -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-number">02</span>
+                    <h2>Compétences</h2>
                 </div>
-
-                <div class="project-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Calanque Project" class="project-image">
-                    <h3>Calanque</h3>
-                    <p class="project-description">Application web Calanque</p>
-                    <div class="project-links">
-                        <a href="https://frontend-production-44a4.up.railway.app/" class="btn" target="_blank">Live Demo</a>
-                    </div>
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Frontend &amp; Backend</h3>
+                        <ul class="chips">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>React.js</li>
+                            <li>Node.js / Express.js</li>
+                            <li>PHP</li>
+                            <li>Python</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h3>Bases de données</h3>
+                        <ul class="chips">
+                            <li>SQL (MySQL)</li>
+                            <li>PostgreSQL</li>
+                            <li>NoSQL (MongoDB)</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="fas fa-toolbox"></i></div>
+                        <h3>Outils &amp; Technologies</h3>
+                        <ul class="chips">
+                            <li>Git &amp; GitHub</li>
+                            <li>Linux &amp; Bash</li>
+                            <li>Docker</li>
+                            <li>CI/CD (GitHub Actions)</li>
+                            <li>API REST &amp; WebSockets</li>
+                            <li>Figma</li>
+                            <li>Trello</li>
+                            <li>Méthodologies Agile</li>
+                        </ul>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <div class="project-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Atelier Calanque WordPress Project" class="project-image">
-                    <h3>Atelier Calanque</h3>
-                    <p class="project-description">Site vitrine réalisé avec WordPress</p>
-                    <div class="project-links">
-                        <a href="https://atelier-calanque-wordpress-production.up.railway.app/" class="btn" target="_blank">Live Demo</a>
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-number">03</span>
+                    <h2>Projets</h2>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-cover cover-1"><i class="fas fa-globe"></i></div>
+                        <div class="project-body">
+                            <h3>Site Portfolio</h3>
+                            <p class="project-description">Site personnel présentant mes compétences et mes projets</p>
+                            <div class="project-links">
+                                <a href="https://anne-gaelle-bernard.github.io/tv-shows/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://github.com/anne-gaelle-bernard/tv-shows" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-cover cover-2"><i class="fas fa-palette"></i></div>
+                        <div class="project-body">
+                            <h3>Site d'artiste</h3>
+                            <p class="project-description">Site portfolio d'artiste mettant en valeur ses œuvres</p>
+                            <div class="project-links">
+                                <a href="https://anne-gaelle-bernard.github.io/artist/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://github.com/anne-gaelle-bernard/artist" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-cover cover-3"><i class="fas fa-cloud-sun"></i></div>
+                        <div class="project-body">
+                            <h3>Weather</h3>
+                            <p class="project-description">Application météo affichant les prévisions en temps réel</p>
+                            <div class="project-links">
+                                <a href="https://weather-production-661d.up.railway.app" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://github.com/anne-gaelle-bernard/Weather.git" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-cover cover-4"><i class="fas fa-water"></i></div>
+                        <div class="project-body">
+                            <h3>Calanque</h3>
+                            <p class="project-description">Application web Calanque</p>
+                            <div class="project-links">
+                                <a href="https://frontend-production-44a4.up.railway.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-cover cover-5"><i class="fab fa-wordpress"></i></div>
+                        <div class="project-body">
+                            <span class="tag">WordPress</span>
+                            <h3>Atelier Calanque</h3>
+                            <p class="project-description">Site vitrine réalisé avec WordPress</p>
+                            <div class="project-links">
+                                <a href="https://atelier-calanque-wordpress-production.up.railway.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <span class="section-number">04</span>
+                    <h2>Travaillons ensemble</h2>
+                    <p>Un projet, une collaboration ou simplement envie d'échanger ? N'hésitez pas à me contacter !</p>
+                    <div class="contact-methods">
+                        <a href="mailto:bernarsanne@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> M'écrire</a>
+                        <a href="https://www.linkedin.com/in/bernard-anne-gaelle" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Interested in collaboration or have a project in mind? Feel free to reach out!</p>
-            <div class="contact-methods">
-                <a href="mailto:bernarsanne@gmail.com" class="btn">Email Me</a>
-                <a href="https://www.linkedin.com/in/bernard-anne-gaelle" class="btn" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Anne-Gaëlle Bernard</p>
             <div class="social-links">
-                <a href="https://github.com/anne-gaelle-bernard" target="_blank" aria-label="GitHub Profile">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/bernard-anne-gaelle" target="_blank" aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:bernarsanne@gmail.com" aria-label="Send Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+                <a href="https://github.com/anne-gaelle-bernard" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/bernard-anne-gaelle" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:bernarsanne@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-
-            <span></span>
-<span></span>
-<span></span>
-              <span></span>
-<span></span>
-<span></span>
-                          <span></span>
-<span></span>
-<span></span>
-            <p>&copy; 2024 Anne-Gaëlle Bernard. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-       
-      
