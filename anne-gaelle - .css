@@ -559,6 +559,7 @@ a {
 .cover-3 { background: linear-gradient(135deg, #1e3c72, #2a5298 50%, #6dd5ed); }
 .cover-4 { background: linear-gradient(135deg, #004e64, #00a5cf 60%, #9fffcb); }
 .cover-5 { background: linear-gradient(135deg, #21759b, #0f3d56); }
+.cover-6 { background: linear-gradient(135deg, #1d3557, #457b9d 55%, #a8dadc); }
 
 .project-body {
     flex: 1;
