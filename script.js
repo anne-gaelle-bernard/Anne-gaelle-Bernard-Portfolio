@@ -56,7 +56,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     }
 
     // Stagger siblings inside grids
-    document.querySelectorAll('.skills-grid, .projects-grid, .hero-content').forEach((group) => {
+    document.querySelectorAll('.projects-grid, .hero-content').forEach((group) => {
         group.querySelectorAll('.reveal').forEach((el, i) => el.style.setProperty('--delay', (i * 0.1) + 's'));
     });
 
@@ -72,112 +72,142 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     items.forEach((el) => observer.observe(el));
 })();
 
-// Hero background: connected particle constellation
+// Cassette card: tracks, counter and transport keys
 (function () {
-    const canvas = document.getElementById('hero-canvas');
-    if (!canvas || !canvas.getContext) return;
+    const tape = document.querySelector('.tape');
+    const tracks = [...document.querySelectorAll('#tape-tracks li')];
+    const counter = document.getElementById('tape-counter');
+    const play = document.getElementById('tape-play');
+    if (!tape || !tracks.length || !counter || !play) return;
 
-    const ctx = canvas.getContext('2d');
-    const hero = canvas.parentElement;
-    const mouse = { x: -9999, y: -9999 };
-    let width, height, particles, rafId;
+    let current = 0;
+    let timer = null;
+    let counterAnim = null;
 
-    function resize() {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        width = hero.clientWidth;
-        height = hero.clientHeight;
-        canvas.width = width * dpr;
-        canvas.height = height * dpr;
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-        const count = Math.min(90, Math.floor((width * height) / 14000));
-        particles = Array.from({ length: count }, () => ({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.35,
-            vy: (Math.random() - 0.5) * 0.35,
-            r: Math.random() * 1.6 + 0.6
-        }));
-    }
-
-    function draw() {
-        ctx.clearRect(0, 0, width, height);
-        const maxDist = 130;
-
-        for (let i = 0; i < particles.length; i++) {
-            const p = particles[i];
-            p.x += p.vx;
-            p.y += p.vy;
-            if (p.x < 0 || p.x > width) p.vx *= -1;
-            if (p.y < 0 || p.y > height) p.vy *= -1;
-
-            // Gentle push away from the cursor
-            const mdx = p.x - mouse.x;
-            const mdy = p.y - mouse.y;
-            const md = Math.hypot(mdx, mdy);
-            if (md < 120 && md > 0) {
-                p.x += (mdx / md) * 1.2;
-                p.y += (mdy / md) * 1.2;
-            }
-
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 193, 7, 0.75)';
-            ctx.fill();
-
-            for (let j = i + 1; j < particles.length; j++) {
-                const q = particles[j];
-                const d = Math.hypot(p.x - q.x, p.y - q.y);
-                if (d < maxDist) {
-                    ctx.beginPath();
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(q.x, q.y);
-                    ctx.strokeStyle = 'rgba(255, 180, 60, ' + (0.18 * (1 - d / maxDist)) + ')';
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                }
-            }
+    function animateCounter(target) {
+        cancelAnimationFrame(counterAnim);
+        const from = parseInt(counter.textContent, 10) || 0;
+        if (prefersReducedMotion) {
+            counter.textContent = String(target).padStart(3, '0');
+            return;
         }
+        const start = performance.now();
+        const step = (now) => {
+            const t = Math.min((now - start) / 600, 1);
+            const value = Math.round(from + (target - from) * (1 - Math.pow(1 - t, 3)));
+            counter.textContent = String(value).padStart(3, '0');
+            if (t < 1) counterAnim = requestAnimationFrame(step);
+        };
+        counterAnim = requestAnimationFrame(step);
     }
 
-    function loop() {
-        draw();
-        rafId = requestAnimationFrame(loop);
+    function select(index) {
+        current = (index + tracks.length) % tracks.length;
+        tracks.forEach((li, i) => li.classList.toggle('active', i === current));
+        animateCounter(parseInt(tracks[current].querySelector('button').dataset.count, 10));
     }
 
-    resize();
-    if (prefersReducedMotion) {
-        draw();
-    } else {
-        loop();
+    function setPlaying(on) {
+        clearInterval(timer);
+        tape.classList.toggle('playing', on);
+        play.innerHTML = on
+            ? '<i class="fas fa-pause"></i><span>Pause</span>'
+            : '<i class="fas fa-play"></i><span>Play</span>';
+        play.setAttribute('aria-label', on ? 'Pause' : 'Lecture');
+        if (on) timer = setInterval(() => select(current + 1), 2600);
     }
 
-    window.addEventListener('resize', () => {
-        resize();
-        if (prefersReducedMotion) draw();
+    function press(btn) {
+        btn.classList.add('pressed');
+        setTimeout(() => btn.classList.remove('pressed'), 120);
+    }
+
+    tracks.forEach((li, i) => li.querySelector('button').addEventListener('click', () => {
+        select(i);
+        setPlaying(false);
+    }));
+
+    play.addEventListener('click', () => setPlaying(!tape.classList.contains('playing')));
+    document.getElementById('tape-ff').addEventListener('click', (e) => { press(e.currentTarget); select(current + 1); });
+    document.getElementById('tape-rew').addEventListener('click', (e) => { press(e.currentTarget); select(current - 1); });
+    document.getElementById('tape-stop').addEventListener('click', (e) => {
+        press(e.currentTarget);
+        setPlaying(false);
+        select(0);
     });
 
-    hero.addEventListener('mousemove', (e) => {
-        const rect = hero.getBoundingClientRect();
-        mouse.x = e.clientX - rect.left;
-        mouse.y = e.clientY - rect.top;
+    select(0);
+})();
+
+// Skills spec sheet: accessible tabs
+(function () {
+    const tabs = [...document.querySelectorAll('.spec-tabs [role="tab"]')];
+    if (!tabs.length) return;
+
+    function activate(tab) {
+        tabs.forEach((t) => {
+            const selected = t === tab;
+            t.setAttribute('aria-selected', String(selected));
+            t.tabIndex = selected ? 0 : -1;
+            document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+        });
+        // Replay the slot-in animation, staggered
+        document.querySelectorAll('#' + tab.getAttribute('aria-controls') + ' .modules li').forEach((li, i) => {
+            li.style.animation = 'none';
+            void li.offsetWidth;
+            li.style.animation = '';
+            li.style.animationDelay = (i * 0.04) + 's';
+        });
+    }
+
+    tabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => activate(tab));
+        tab.addEventListener('keydown', (e) => {
+            const dir = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+            if (!dir) return;
+            const next = tabs[(i + dir + tabs.length) % tabs.length];
+            next.focus();
+            activate(next);
+        });
     });
-    hero.addEventListener('mouseleave', () => {
-        mouse.x = -9999;
-        mouse.y = -9999;
+})();
+
+// Contact terminal: choose a line, then Return opens a pre-filled email
+(function () {
+    const options = [...document.querySelectorAll('#screen-options [role="option"]')];
+    const returnKey = document.getElementById('screen-return');
+    if (!options.length || !returnKey) return;
+
+    let current = 0;
+
+    function select(index, focus) {
+        current = (index + options.length) % options.length;
+        options.forEach((opt, i) => {
+            opt.setAttribute('aria-selected', String(i === current));
+            opt.tabIndex = i === current ? 0 : -1;
+        });
+        if (focus) options[current].focus();
+    }
+
+    function send() {
+        returnKey.classList.add('pressed');
+        setTimeout(() => returnKey.classList.remove('pressed'), 120);
+        const subject = encodeURIComponent(options[current].dataset.subject);
+        window.location.href = 'mailto:bernarsanne@gmail.com?subject=' + subject;
+    }
+
+    options.forEach((opt, i) => {
+        opt.addEventListener('click', () => select(i));
+        opt.addEventListener('dblclick', send);
+        opt.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown') { e.preventDefault(); select(current + 1, true); }
+            if (e.key === 'ArrowUp') { e.preventDefault(); select(current - 1, true); }
+            if (e.key === 'Enter') { e.preventDefault(); send(); }
+            if (['1', '2', '3'].includes(e.key)) select(Number(e.key) - 1, true);
+        });
     });
 
-    // Pause the animation when the hero is off screen
-    if ('IntersectionObserver' in window && !prefersReducedMotion) {
-        new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                if (!rafId) loop();
-            } else {
-                cancelAnimationFrame(rafId);
-                rafId = null;
-            }
-        }).observe(hero);
-    }
+    returnKey.addEventListener('click', send);
 })();
 
 // Footer year

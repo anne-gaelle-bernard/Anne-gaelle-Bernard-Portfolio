@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anne-Gaëlle Bernard - Développeuse Web & Cheffe de projet</title>
-    <meta name="description" content="Portfolio d'Anne-Gaëlle Bernard, développeuse web et chef de projet en alternance à La Plateforme.">
+    <meta name="description" content="Portfolio d'Anne-Gaëlle Bernard, développeuse web et cheffe de projet en alternance à La Plateforme.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="anne-gaelle - .css">
 </head>
 <body>
+    <a href="#about" class="skip-link">Aller au contenu</a>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
-            <a href="#home" class="logo">AG<span>.</span>B</a>
+            <a href="#home" class="logo"><span class="logo-sun" aria-hidden="true"></span>Anne-Gaëlle</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <ul class="navbar-nav" id="navbar-nav">
-                <li><a href="#home">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
+                <li><a href="#management">Gestion de projet</a></li>
                 <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
         </div>
@@ -31,107 +33,137 @@
 
     <!-- Hero -->
     <header id="home" class="hero">
-        <canvas id="hero-canvas" aria-hidden="true"></canvas>
-        <div class="hero-glow" aria-hidden="true"></div>
-        <div class="hero-content">
-            <p class="hero-eyebrow reveal">Bonjour, je suis</p>
-            <h1 class="reveal">Anne-Gaëlle <span class="accent">Bernard</span></h1>
-            <p class="hero-subtitle reveal">Développeuse Web <span class="dot">•</span> Cheffe de projet</p>
-            <div class="hero-actions reveal">
-                <a href="#projects" class="btn btn-primary">Voir mes projets <i class="fas fa-arrow-right"></i></a>
-                <a href="./CV_Anne-Gaelle_BERNARD_Developpeuse_Web_1.pdf" class="btn btn-ghost" download><i class="fas fa-download"></i> Télécharger mon CV</a>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-intro reveal">
+                    <figure class="portrait">
+                        <img src="profil.jpg" alt="Portrait d'Anne-Gaëlle Bernard" width="200" height="200">
+                    </figure>
+                    <p class="eyebrow">Portfolio · Édition 2026</p>
+                </div>
+                <h1 class="reveal">Anne-Gaëlle <span class="accent">Bernard</span></h1>
+                <p class="hero-subtitle reveal">Développeuse web &amp; cheffe de projet, pour vos projets de bout en bout.</p>
+                <div class="hero-actions reveal">
+                    <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    <a href="#projects" class="btn btn-ghost">Voir les projets</a>
+                </div>
+                <p class="hero-signature reveal"><span>Développement</span><span>Gestion de projet</span><span>Méthodes Agile</span></p>
             </div>
+
+            <!-- Cassette card -->
+            <section id="about" class="tape reveal" aria-label="À propos">
+                <div class="tape-head">
+                    <span class="tape-title">Profil.tap</span>
+                    <span class="tape-side">FACE A · AGB-26</span>
+                </div>
+                <div class="tape-window">
+                    <div class="reel" aria-hidden="true"><span></span></div>
+                    <div class="tape-counter">
+                        <span class="counter-label">Compteur</span>
+                        <span class="counter-value" id="tape-counter">000</span>
+                    </div>
+                    <div class="reel" aria-hidden="true"><span></span></div>
+                </div>
+                <ol class="tape-tracks" id="tape-tracks">
+                    <li class="active">
+                        <button type="button" data-count="016"><span class="track-num">016</span><span class="track-key">Poste</span><span class="track-val">Cheffe de projet en alternance</span></button>
+                    </li>
+                    <li>
+                        <button type="button" data-count="108"><span class="track-num">108</span><span class="track-key">École</span><span class="track-val">La Plateforme</span></button>
+                    </li>
+                    <li>
+                        <button type="button" data-count="200"><span class="track-num">200</span><span class="track-key">Métier</span><span class="track-val">Développement front &amp; back</span></button>
+                    </li>
+                    <li>
+                        <button type="button" data-count="292"><span class="track-num">292</span><span class="track-key">Méthode</span><span class="track-val">Agile &amp; coordination d'équipes</span></button>
+                    </li>
+                </ol>
+                <p class="tape-bio" id="tape-bio">
+                    Jeune professionnelle issue d'une pédagogie par projet, j'ai acquis une pratique concrète
+                    du développement front et back tout en coordonnant des équipes.
+                </p>
+                <div class="tape-controls">
+                    <button type="button" class="key" id="tape-rew" aria-label="Piste précédente"><i class="fas fa-backward"></i><span>Rew</span></button>
+                    <button type="button" class="key key-play" id="tape-play" aria-label="Lecture"><i class="fas fa-play"></i><span>Play</span></button>
+                    <button type="button" class="key" id="tape-ff" aria-label="Piste suivante"><i class="fas fa-forward"></i><span>FF</span></button>
+                    <button type="button" class="key" id="tape-stop" aria-label="Stop"><i class="fas fa-stop"></i><span>Stop</span></button>
+                </div>
+            </section>
         </div>
-        <a href="#about" class="scroll-indicator" aria-label="Défiler vers le bas"><span></span></a>
     </header>
 
     <main>
-        <!-- About -->
-        <section id="about" class="section">
-            <div class="container about-grid">
-                <div class="section-heading reveal">
-                    <span class="section-number">01</span>
-                    <h2>À propos</h2>
-                </div>
-                <div class="about-text reveal">
-                    <p class="lead">
-                        Jeune professionnelle issue d'une pédagogie par projet, j'ai acquis une pratique concrète
-                        du développement front et back tout en coordonnant des équipes.
-                    </p>
-                    <p>
-                        Actuellement <strong>Cheffe de projet en alternance à La Plateforme</strong>, je combine rigueur,
-                        esprit d'initiative et goût pour la gestion de projet avec ma passion pour le développement web.
-                    </p>
-                    <ul class="about-highlights">
-                        <li><i class="fas fa-code"></i> Développement front &amp; back</li>
-                        <li><i class="fas fa-diagram-project"></i> Gestion de projet Agile</li>
-                        <li><i class="fas fa-users"></i> Coordination d'équipes</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <!-- Skills -->
-        <section id="skills" class="section section-alt">
+        <section id="skills" class="section">
             <div class="container">
                 <div class="section-heading reveal">
-                    <span class="section-number">02</span>
-                    <h2>Compétences</h2>
+                    <span class="section-number">01</span>
+                    <h2>Fiche technique.</h2>
+                    <p>Tout est inclus dans la configuration standard. Aucun câble supplémentaire requis.</p>
                 </div>
-                <div class="skills-grid">
-                    <article class="skill-card reveal">
-                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-                        <h3>Frontend &amp; Backend</h3>
-                        <ul class="chips">
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>React.js</li>
-                            <li>Node.js / Express.js</li>
-                            <li>PHP</li>
-                            <li>Python</li>
+
+                <div class="spec-sheet reveal">
+                    <div class="spec-tabs" role="tablist" aria-label="Catégories de compétences">
+                        <button role="tab" aria-selected="true" aria-controls="spec-code" id="tab-code">Code <span>7</span></button>
+                        <button role="tab" aria-selected="false" aria-controls="spec-db" id="tab-db" tabindex="-1">Données <span>3</span></button>
+                        <button role="tab" aria-selected="false" aria-controls="spec-tools" id="tab-tools" tabindex="-1">Outils <span>6</span></button>
+                        <button role="tab" aria-selected="false" aria-controls="spec-methods" id="tab-methods" tabindex="-1">Méthodes <span>4</span></button>
+                    </div>
+
+                    <div class="spec-panel" role="tabpanel" id="spec-code" aria-labelledby="tab-code">
+                        <p class="spec-meta">Frontend &amp; Backend · 7 modules · 3 emplacements libres</p>
+                        <ul class="modules">
+                            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React.js</li><li>Node.js / Express.js</li><li>PHP</li><li>Python</li>
+                            <li class="free"></li><li class="free"></li><li class="free"></li>
                         </ul>
-                    </article>
-                    <article class="skill-card reveal">
-                        <div class="skill-icon"><i class="fas fa-database"></i></div>
-                        <h3>Bases de données</h3>
-                        <ul class="chips">
-                            <li>SQL (MySQL)</li>
-                            <li>PostgreSQL</li>
-                            <li>NoSQL (MongoDB)</li>
+                    </div>
+                    <div class="spec-panel" role="tabpanel" id="spec-db" aria-labelledby="tab-db" hidden>
+                        <p class="spec-meta">Bases de données · 3 modules · 7 emplacements libres</p>
+                        <ul class="modules">
+                            <li>SQL (MySQL)</li><li>PostgreSQL</li><li>NoSQL (MongoDB)</li>
+                            <li class="free"></li><li class="free"></li><li class="free"></li><li class="free"></li><li class="free"></li><li class="free"></li><li class="free"></li>
                         </ul>
-                    </article>
-                    <article class="skill-card reveal">
-                        <div class="skill-icon"><i class="fas fa-toolbox"></i></div>
-                        <h3>Outils &amp; Technologies</h3>
-                        <ul class="chips">
-                            <li>Git &amp; GitHub</li>
-                            <li>Linux &amp; Bash</li>
-                            <li>Docker</li>
-                            <li>CI/CD (GitHub Actions)</li>
-                            <li>API REST &amp; WebSockets</li>
-                            <li>Figma</li>
-                            <li>Trello</li>
-                            <li>Méthodologies Agile</li>
+                    </div>
+                    <div class="spec-panel" role="tabpanel" id="spec-tools" aria-labelledby="tab-tools" hidden>
+                        <p class="spec-meta">Outils &amp; Technologies · 6 modules · 4 emplacements libres</p>
+                        <ul class="modules">
+                            <li>Git &amp; GitHub</li><li>Linux &amp; Bash</li><li>Docker</li><li>CI/CD (GitHub Actions)</li><li>API REST &amp; WebSockets</li><li>Figma</li>
+                            <li class="free"></li><li class="free"></li><li class="free"></li><li class="free"></li>
                         </ul>
-                    </article>
+                    </div>
+                    <div class="spec-panel" role="tabpanel" id="spec-methods" aria-labelledby="tab-methods" hidden>
+                        <p class="spec-meta">Méthodes · 4 modules · 6 emplacements libres</p>
+                        <ul class="modules">
+                            <li>Méthodologies Agile</li><li>Trello</li><li>Gestion de projet</li><li>Coordination d'équipes</li>
+                            <li class="free"></li><li class="free"></li><li class="free"></li><li class="free"></li><li class="free"></li><li class="free"></li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-foot">
+                        <span>Fiche AGB-26</span>
+                        <span>Caractéristiques sujettes à modification sans préavis.</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects -->
-        <section id="projects" class="section">
+        <section id="projects" class="section section-alt">
             <div class="container">
                 <div class="section-heading reveal">
-                    <span class="section-number">03</span>
-                    <h2>Projets personnels</h2>
+                    <span class="section-number">02</span>
+                    <h2>Projets personnels.</h2>
+                    <p>Six enregistrements, face B. Chacun peut être écouté en ligne.</p>
                 </div>
                 <div class="projects-grid">
-                    <article class="project-card reveal">
-                        <div class="project-cover cover-1"><i class="fas fa-globe"></i></div>
+                    <article class="project-card reveal" style="--tone: var(--wine)">
+                        <div class="project-label">
+                            <span class="track">Piste 01</span>
+                            <i class="fas fa-tv" aria-hidden="true"></i>
+                        </div>
                         <div class="project-body">
-                            <h3> Dr House site </h3>
-                            <p class="project-description">Site personnel frontend pour afficher les séries télévisées</p>
+                            <h3>Dr House site</h3>
+                            <p class="project-description">Site personnel frontend pour afficher les séries télévisées.</p>
                             <div class="project-links">
                                 <a href="https://anne-gaelle-bernard.github.io/tv-shows/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
                                 <a href="https://github.com/anne-gaelle-bernard/tv-shows" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
@@ -139,11 +171,14 @@
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
-                        <div class="project-cover cover-2"><i class="fas fa-palette"></i></div>
+                    <article class="project-card reveal" style="--tone: var(--forest)">
+                        <div class="project-label">
+                            <span class="track">Piste 02</span>
+                            <i class="fas fa-palette" aria-hidden="true"></i>
+                        </div>
                         <div class="project-body">
                             <h3>Site d'artiste</h3>
-                            <p class="project-description">Site portfolio d'artiste mettant en valeur ses œuvres</p>
+                            <p class="project-description">Site portfolio d'artiste mettant en valeur ses œuvres.</p>
                             <div class="project-links">
                                 <a href="https://anne-gaelle-bernard.github.io/artist/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
                                 <a href="https://github.com/anne-gaelle-bernard/artist" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
@@ -151,11 +186,14 @@
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
-                        <div class="project-cover cover-3"><i class="fas fa-cloud-sun"></i></div>
+                    <article class="project-card reveal" style="--tone: var(--bronze)">
+                        <div class="project-label">
+                            <span class="track">Piste 03</span>
+                            <i class="fas fa-cloud-sun" aria-hidden="true"></i>
+                        </div>
                         <div class="project-body">
                             <h3>Weather</h3>
-                            <p class="project-description">Application météo affichant les prévisions en temps réel</p>
+                            <p class="project-description">Application météo affichant les prévisions en temps réel.</p>
                             <div class="project-links">
                                 <a href="https://weather-production-661d.up.railway.app" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
                                 <a href="https://github.com/anne-gaelle-bernard/Weather.git" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
@@ -163,34 +201,43 @@
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
-                        <div class="project-cover cover-4"><i class="fas fa-water"></i></div>
+                    <article class="project-card reveal" style="--tone: var(--forest)">
+                        <div class="project-label">
+                            <span class="track">Piste 04</span>
+                            <i class="fas fa-water" aria-hidden="true"></i>
+                        </div>
                         <div class="project-body">
                             <h3>Calanque</h3>
-                            <p class="project-description">Application web Calanque</p>
+                            <p class="project-description">Application web Calanque.</p>
                             <div class="project-links">
                                 <a href="https://frontend-production-44a4.up.railway.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
-                        <div class="project-cover cover-5"><i class="fab fa-wordpress"></i></div>
+                    <article class="project-card reveal" style="--tone: var(--wine)">
+                        <div class="project-label">
+                            <span class="track">Piste 05</span>
+                            <i class="fab fa-wordpress" aria-hidden="true"></i>
+                        </div>
                         <div class="project-body">
                             <span class="tag">WordPress</span>
                             <h3>Atelier Calanque</h3>
-                            <p class="project-description">Site vitrine réalisé avec WordPress</p>
+                            <p class="project-description">Site vitrine réalisé avec WordPress.</p>
                             <div class="project-links">
                                 <a href="https://atelier-calanque-wordpress-production.up.railway.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card reveal">
-                        <div class="project-cover cover-6"><i class="fas fa-wallet"></i></div>
+                    <article class="project-card reveal" style="--tone: var(--bronze)">
+                        <div class="project-label">
+                            <span class="track">Piste 06</span>
+                            <i class="fas fa-wallet" aria-hidden="true"></i>
+                        </div>
                         <div class="project-body">
                             <h3>Gestion de finances</h3>
-                            <p class="project-description">Application web de gestion et de suivi des finances personnelles</p>
+                            <p class="project-description">Application web de gestion et de suivi des finances personnelles.</p>
                             <div class="project-links">
                                 <a href="https://finance-gazy.vercel.app/login" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
                                 <a href="https://github.com/anne-gaelle-bernard/finance-.git" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
@@ -201,16 +248,85 @@
             </div>
         </section>
 
+        <!-- Project management -->
+        <section id="management" class="section">
+            <div class="container mgmt-grid">
+                <div>
+                    <div class="section-heading reveal">
+                        <span class="section-number">03</span>
+                        <h2>Chefferie de projet.</h2>
+                        <p>Projets sur lesquels j'ai travaillé en tant que <strong>cheffe de projet en alternance à La Plateforme</strong>.</p>
+                    </div>
+
+                    <article class="ticket reveal">
+                        <div class="ticket-stub">
+                            <span>Admis</span>
+                            <i class="fas fa-gavel" aria-hidden="true"></i>
+                            <span>Jury</span>
+                        </div>
+                        <div class="ticket-body">
+                            <h3>Membre du jury CDPI · Paris &amp; Toulon</h3>
+                            <p>Jury pour les CDPI des campus de Paris et de Toulon sur le projet <strong>MarsAI</strong> : évaluation des productions réalisées par les apprenants pour un client, selon trois axes.</p>
+                            <ul class="chips">
+                                <li>Technique</li>
+                                <li>Gestion de projet</li>
+                                <li>Présentation</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="tracklist reveal">
+                    <div class="tracklist-head">
+                        <span>Tracklist</span>
+                        <span>8 titres</span>
+                    </div>
+                    <ol>
+                        <li><span class="t-num">01</span><span class="t-name">Les Repas de Lili</span></li>
+                        <li><span class="t-num">02</span><span class="t-name">Technicert</span></li>
+                        <li><span class="t-num">03</span><span class="t-name">Mémoire des Territoires</span></li>
+                        <li><span class="t-num">04</span><span class="t-name">La Hanse</span></li>
+                        <li><span class="t-num">05</span><span class="t-name">La MAM</span></li>
+                        <li><span class="t-num">06</span><span class="t-name">1500</span></li>
+                        <li><span class="t-num">07</span><span class="t-name">SRIAS</span></li>
+                        <li><span class="t-num">08</span><span class="t-name">Vizeo</span></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="contact-card reveal">
+        <section id="contact" class="section section-alt">
+            <div class="container contact-grid">
+                <div class="section-heading reveal">
                     <span class="section-number">04</span>
-                    <h2>Travaillons ensemble</h2>
-                    <p>Un projet, une collaboration ou simplement envie d'échanger ? N'hésitez pas à me contacter !</p>
-                    <div class="contact-methods">
-                        <a href="mailto:bernarsanne@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> M'écrire</a>
-                        <a href="https://www.linkedin.com/in/bernard-anne-gaelle" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <h2>Ouvrons la ligne.</h2>
+                    <p>Un projet, une collaboration ou simplement envie d'échanger ? Choisissez une ligne à l'écran, puis appuyez sur Entrée.</p>
+                    <div class="contact-links">
+                        <a href="mailto:bernarsanne@gmail.com" class="contact-row"><span>E-mail</span><strong>bernarsanne@gmail.com</strong></a>
+                        <a href="https://github.com/anne-gaelle-bernard" class="contact-row" target="_blank" rel="noopener"><span>GitHub</span><strong>@anne-gaelle-bernard</strong></a>
+                        <a href="https://www.linkedin.com/in/bernard-anne-gaelle" class="contact-row" target="_blank" rel="noopener"><span>LinkedIn</span><strong>in/bernard-anne-gaelle</strong></a>
+                        <a href="./CV_Anne-Gaelle_BERNARD_Developpeuse_Web_1.pdf" class="contact-row" download><span>CV</span><strong>Télécharger (PDF)</strong></a>
+                    </div>
+                </div>
+
+                <div class="terminal reveal">
+                    <div class="screen">
+                        <p>AGB-26 CONTACT SYSTEM</p>
+                        <p>PRÊT.</p>
+                        <p>&gt;RUN CONTACT.BAS</p>
+                        <p class="dim">CHOISISSEZ UNE LIGNE, PUIS ENTRÉE.</p>
+                        <ul class="screen-options" id="screen-options" role="listbox" aria-label="Motif du message">
+                            <li role="option" aria-selected="true" tabindex="0" data-subject="Proposition d'entretien">[ 1 ] Proposer un entretien</li>
+                            <li role="option" aria-selected="false" tabindex="-1" data-subject="Parlons d'un projet">[ 2 ] Parler d'un projet</li>
+                            <li role="option" aria-selected="false" tabindex="-1" data-subject="Bonjour !">[ 3 ] Juste dire bonjour</li>
+                        </ul>
+                        <p class="prompt">&gt;<span class="cursor"></span></p>
+                    </div>
+                    <div class="terminal-base">
+                        <span class="led" aria-hidden="true"></span>
+                        <span class="terminal-name">AGB-26</span>
+                        <button type="button" class="key key-return" id="screen-return">Entrée <i class="fas fa-turn-down fa-rotate-90"></i></button>
                     </div>
                 </div>
             </div>
@@ -220,12 +336,19 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-inner">
-            <p>&copy; <span id="year">2026</span> Anne-Gaëlle Bernard</p>
+            <div>
+                <p class="footer-name">Anne-Gaëlle</p>
+                <p class="footer-tag">Développeuse web &amp; cheffe de projet.</p>
+            </div>
             <div class="social-links">
                 <a href="https://github.com/anne-gaelle-bernard" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/bernard-anne-gaelle" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:bernarsanne@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year">2026</span> Anne-Gaëlle Bernard. Imprimé sur papier recyclé.</p>
+            <a href="#home">Retour en haut ↑</a>
         </div>
     </footer>
 
