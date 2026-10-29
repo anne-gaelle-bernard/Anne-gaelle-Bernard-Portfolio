@@ -215,3 +215,29 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 })();
+
+// Project videos: play on hover, or while in view on touch screens
+(function () {
+    const videos = document.querySelectorAll('.project-shot');
+    if (!videos.length || prefersReducedMotion) return;
+
+    const play = (video) => video.play().catch(() => {});
+    const canHover = window.matchMedia('(hover: hover)').matches;
+
+    if (canHover || !('IntersectionObserver' in window)) {
+        videos.forEach((video) => {
+            const card = video.closest('.project-card');
+            card.addEventListener('mouseenter', () => play(video));
+            card.addEventListener('mouseleave', () => video.pause());
+        });
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) play(entry.target);
+            else entry.target.pause();
+        });
+    }, { threshold: 0.6 });
+    videos.forEach((video) => observer.observe(video));
+})();
