@@ -658,7 +658,8 @@ strong { font-weight: 600; }
     pointer-events: none;
     z-index: 1;
 }
-a.project-label { min-height: 200px; overflow: hidden; }
+a.project-label { min-height: 220px; overflow: hidden; background: #fbf8f2; }
+a.project-label::before { display: none; }
 .project-shot {
     position: absolute;
     inset: 0;
@@ -673,7 +674,7 @@ a.project-label::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, var(--tone) 0%, color-mix(in srgb, var(--tone) 35%, transparent) 55%, transparent 100%);
+    background: linear-gradient(to top, color-mix(in srgb, var(--tone) 85%, black) 0%, transparent 38%);
     pointer-events: none;
 }
 .project-label .track,
